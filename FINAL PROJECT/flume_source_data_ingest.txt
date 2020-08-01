@@ -1,0 +1,5 @@
+
+flume-ng agent -n httpagent -c conf -f flume_streaming.conf - Dflume.root.logger=INFO,console
+
+curl -X POST -H 'Content-Type: application/json; charset=UTF-8' -d '[{"headers":{"type":"sample"}, "body":"{\"season\":1, \"weather\":1, \"temp\":19.84, \"atemp\": 14.395, \"humidity\":81.9, \"windspeed\":16.9}"}]' http://localhost:44444/
+
